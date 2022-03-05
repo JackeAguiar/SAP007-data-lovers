@@ -12,20 +12,6 @@ header {
   text-align: center;
 }
 
-z
-.poke {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  margin: 5em;
-  position: relative;
-  display:inline-block;
-}
-
-.img-pokemon{
-  height: 25rem;
-}
-
 .barraDePesquisa{
   display:flex;
   width:70vw;
@@ -95,6 +81,14 @@ z
   width: 160px;
   height: 25px;
 }
+
+.modalContainer .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;  
+  font-weight: bold;
+}
+
 .planta{
   background-color: transparent;
 }
