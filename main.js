@@ -9,7 +9,7 @@ function cardsPokemons(data) {
   const cardPokemon = document.getElementById("cards");
   cardPokemon.innerHTML = data.map((item) =>
     `<div class="info-cards" id="flip"> 
-   <p id="num" class="num">  ${item.num}</p> 
+   <p id="num">  ${item.num}</p> 
    <img class="img-card" src="${item.img}"/> 
    <p class='title'>Name: </p>
    <p id="name">${item.name}</p> 
@@ -26,8 +26,8 @@ cardsPokemons(pokemons);
 
 const search = document.getElementById("inputSearch")
 
-search.addEventListener("keypress", (e) => {
-  const searchName = e.search.value;
+search.addEventListener("keypress", () => {
+  const searchName = search.value;
   const pokemonsName = searchByName(searchName, pokemons);
   cardsPokemons(pokemonsName);
 })
