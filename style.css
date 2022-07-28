@@ -278,9 +278,6 @@ a {
     align-items: flex-start;
   }
 
-  a:hover {
-    color: #FFCE45;
-  }
 }
 
 @media (max-width:480px) {
