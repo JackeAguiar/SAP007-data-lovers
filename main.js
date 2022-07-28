@@ -8,16 +8,20 @@ function cardsPokemons(data) {
   document.getElementById("calculation").innerHTML = "";
   const cardPokemon = document.getElementById("cards");
   cardPokemon.innerHTML = data.map((item) =>
-    `<div class="info-cards" id="flip"> 
-   <p id="num">  ${item.num}</p> 
-   <img class="img-card" src="${item.img}"/> 
-   <p class='title'>Name: </p>
-   <p id="name">${item.name}</p> 
-   <p class='title'>Type:</p>
-   <p id="type" >${item.type.join(' | ')}</p> 
-   <p class='title'>About:</p>
-   <p id="about">${item.about}</p> 
-   </div>`
+   `
+    <div class="info-cards">
+      <div class="img-and-name-container">
+        <img class="img-card" src="${item.img}"/>
+        <p class="name"> ${item.name}</p>
+      </div>
+      <div class="card-details">
+        <p><strong> Type: </strong> ${item.type.join(" | ")}</p>
+        <p><strong> About: </strong> ${item.about}</p>
+      </div>
+      <div class="number-container">
+        <p class="num">  ${item.num}</p>
+      </div>
+    </div>`
 
   ).join("")
 
@@ -48,7 +52,6 @@ function typePercent() {
   let result = calcType(pokemons, filterType);
   document.getElementById("calculation").innerText += `The selected pokémon represent ${result}% of the total.`
 }
-
 
 
 const sortOrder = document.getElementById("sortAlphabet");
